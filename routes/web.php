@@ -38,6 +38,12 @@ Route::get('/dashboard', function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::get('/my-account', function () {
+        return view('profile.user-account');
+    })->name('account.user');
+    Route::get('/profile-working', function () {
+        return view('profile.working');
+    })->name('profile.working');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     

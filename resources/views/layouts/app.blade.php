@@ -84,7 +84,7 @@
                   <i class="bi bi-chevron-down toggle-dropdown"></i>
                 </a>
                 <ul>
-                  <li><a href="{{ route('dashboard') }}">My Account</a></li>
+                  <li><a href="{{ route('account.user') }}">My Account</a></li>
                   <li><a href="{{ route('orders.index') }}">My Orders</a></li>
                   @if(auth()->user()->isAdmin())
                     <li><a href="{{ route('admin.dashboard') }}">Admin Dashboard</a></li>
